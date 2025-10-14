@@ -9,12 +9,12 @@ html {
     flex-wrap: wrap;
     width: 600px;
     height :600px;
-    background-color : pink;
+   
     
 }
 
 .addSquare{
-    background-color: lightpink;
+    background-color: lightblue;
     border: 1px solid black;
     box-sizing: border-box;
 }
