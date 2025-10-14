@@ -5,8 +5,16 @@ html {
     min-height: 100vh;
 }
 .container{
+    display: flex;
+    flex-wrap: wrap;
     width: 600px;
     height :600px;
     background-color : pink;
+    
 }
 
+.addSquare{
+    background-color: lightpink;
+    border: 1px solid black;
+    box-sizing: border-box;
+}

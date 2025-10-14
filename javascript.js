@@ -2,19 +2,14 @@ const containerForSquares = document.querySelector(".container")
 
 
 
-// function adjustWidth (num) {
-    
-//     const square = document.createElement("div")
-//     square.className = "addSquare"
-//     square.style.backgroundColor = "blue";
-    
-//     square.style.width = (600/num) + "px";
+function createSquares(num) {
+    for(let i = 0; i < num * num; i++) {
+        const square = document.createElement("div")
+        square.className = "addSquare"
+        containerForSquares.appendChild(square)
+        square.style.height = (600/num) + "px";
+        square.style.width = (600/num) + "px";
+    }
+}
 
-//     square.style.height = (600/num) + "px";
-//     containerForSquares.appendChild(square)
-
-//     return square.style.width
-// }
-
-// console.log(adjustWidth(9))
-
+createSquares(16)
