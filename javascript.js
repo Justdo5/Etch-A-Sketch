@@ -18,7 +18,6 @@ buttonContainer.appendChild(buttonRefresh)
 
 // EVENT LISTENERS
 buttonCreateSquares.addEventListener("click", createSquares)
-
 buttonRefresh.addEventListener("click", refreshPage)
 function refreshPage(){
     window.location.reload()
@@ -53,6 +52,7 @@ function createSquares(num) {
             square.style.backgroundColor =  "lightblue"
         }
     }
+    buttonCreateSquares.removeEventListener("click", createSquares)
 }
 
 
