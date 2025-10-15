@@ -1,22 +1,29 @@
+//  DOM ELEMENTS
 const containerForSquares = document.querySelector(".container")
+
 const buttonContainer = document.createElement("div")
 buttonContainer.className= "buttonContainer"
 document.body.appendChild(buttonContainer)
+
 const buttonCreateSquares = document.createElement("button")
 buttonCreateSquares.textContent = "Number of squares"
 buttonCreateSquares.className = "button"
 buttonContainer.appendChild(buttonCreateSquares)
+
 const buttonRefresh = document.createElement("button")
 buttonRefresh.textContent = "Refresh"
 buttonRefresh.className = "button"
 buttonContainer.appendChild(buttonRefresh)
 
 
+// EVENT LISTENERS
+buttonCreateSquares.addEventListener("click", createSquares)
 
 buttonRefresh.addEventListener("click", refreshPage)
 function refreshPage(){
     window.location.reload()
 }
+
 
 function createSquares(num) {
     function enterNumber(){
@@ -47,8 +54,6 @@ function createSquares(num) {
         }
     }
 }
-
-createSquares()
 
 
    

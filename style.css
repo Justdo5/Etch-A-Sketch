@@ -14,8 +14,7 @@ body{
     flex-wrap: wrap;
     width: 600px;
     height :600px;
-    background-color: red;
-    
+    background-color: lightblue; 
 }
 
 .addSquare{
@@ -23,7 +22,6 @@ body{
     border: 1px solid black;
     box-sizing: border-box;
 }
-
 
 .buttonContainer{
     display: flex;
