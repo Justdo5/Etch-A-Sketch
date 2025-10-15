@@ -1,7 +1,13 @@
 const containerForSquares = document.querySelector(".container")
 
 function createSquares(num) {
+    num = parseInt(prompt("Number of squares per side"))
+    while(num >= 100){
+        num = parseInt(prompt("Number of squares per side"))
+    }
+    console.log(num)
     for(let i = 0; i < num * num; i++) {
+       
         const square = document.createElement("div")
         square.className = "addSquare"
         containerForSquares.appendChild(square)
@@ -11,10 +17,10 @@ function createSquares(num) {
         square.addEventListener("mouseleave", defaultColor)
 
         function changeColor() {
-            let random1 = Math.random() * 256 + 1
-            let random2 = Math.random() * 256 + 1
-            let random3 = Math.random() * 256 + 1
-          square.style.backgroundColor =  `rgb(${random1},${random2},${random3})`
+            let randomColor1 = Math.random() * 256 + 1
+            let randomColor2 = Math.random() * 256 + 1
+            let randomColor3 = Math.random() * 256 + 1
+            square.style.backgroundColor =  `rgb(${randomColor1},${randomColor2},${randomColor3})`
         }
 
         function defaultColor() {
@@ -23,7 +29,8 @@ function createSquares(num) {
     }
 }
 
-createSquares(19)
+createSquares()
+
 
 
 

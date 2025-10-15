@@ -1,20 +1,30 @@
-html {    
+html, body {    
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    
 }
+
+
+
 .container{
     display: flex;
     flex-wrap: wrap;
     width: 600px;
     height :600px;
-   
-    
 }
 
 .addSquare{
     background-color: lightblue;
     border: 1px solid black;
     box-sizing: border-box;
+}
+
+#numberOfSquares{
+    /* font-size: 12px;
+    margin: 0; */
+    width: 100px;
+    padding: 16px;
+    text-align: center;
 }
