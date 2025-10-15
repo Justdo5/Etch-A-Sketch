@@ -1,9 +1,10 @@
 //  DOM ELEMENTS
-const containerForSquares = document.querySelector(".container")
+const containerELe = document.querySelector("#container")
+const containerForSquares = document.querySelector(".squareContainer")
 
 const buttonContainer = document.createElement("div")
 buttonContainer.className= "buttonContainer"
-document.body.appendChild(buttonContainer)
+containerELe.appendChild(buttonContainer)
 
 const buttonCreateSquares = document.createElement("button")
 buttonCreateSquares.textContent = "Number of squares"

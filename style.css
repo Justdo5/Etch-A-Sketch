@@ -1,16 +1,21 @@
-html, body {    
+html{    
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: lightslategray ;
+    background-color: lightgrey;
 }
 
-body{
-    gap: 30px;
+h1{
+    font-size: 48px;
 }
 
-.container{
+#container{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+.squareContainer{
     display: flex;
     flex-wrap: wrap;
     width: 600px;
@@ -19,7 +24,6 @@ body{
 }
 
 .addSquare{
-    background-color: lightblue;
     border: 1px solid black;
     box-sizing: border-box;
 }
@@ -27,8 +31,8 @@ body{
 .buttonContainer{
     display: flex;
     flex-direction: column;
-    height: 150px;
-    width: 150px;
+    gap: 10px;
+    
 }
 
 .button{
@@ -37,6 +41,7 @@ body{
     border-radius: 5px;
     border-color: black;
     font-size: 12px;
+    height: 50px;
     width: 100px;
     padding: 8px;
 }
