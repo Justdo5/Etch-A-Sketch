@@ -32,4 +32,15 @@ body{
     width: 150px;
 }
 
+.button{
+    background-color: blanchedalmond;
+    font-weight: 500;
+    border-radius: 5px;
+    border-color: black;
+    font-size: 12px;
+    width: 100px;
+    padding: 8px;
+}
+
+
 

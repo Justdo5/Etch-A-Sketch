@@ -5,6 +5,11 @@ buttonContainer.className= "buttonContainer"
 document.body.appendChild(buttonContainer)
 
 
+const buttonRefresh = document.createElement("button")
+buttonRefresh.textContent = "Refresh"
+buttonRefresh.className = "button"
+buttonContainer.appendChild(buttonRefresh)
+
 
 
 function createSquares(num) {
@@ -37,6 +42,7 @@ function createSquares(num) {
     }
 }
 
+createSquares()
 
 
    
