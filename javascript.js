@@ -4,11 +4,17 @@ const buttonContainer = document.createElement("div")
 buttonContainer.className= "buttonContainer"
 document.body.appendChild(buttonContainer)
 
-
 const buttonRefresh = document.createElement("button")
 buttonRefresh.textContent = "Refresh"
 buttonRefresh.className = "button"
 buttonContainer.appendChild(buttonRefresh)
+
+
+buttonRefresh.addEventListener("click", refreshPage)
+function refreshPage(){
+    window.location.reload()
+}
+
 
 
 
