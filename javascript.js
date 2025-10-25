@@ -1,57 +1,48 @@
-//  DOM ELEMENTS
-const containerELe = document.querySelector("#container")
-const containerForSquares = document.querySelector(".squareContainer")
-
-const buttonContainer = document.createElement("div")
-buttonContainer.className= "buttonContainer"
-containerELe.appendChild(buttonContainer)
-
+const containerForAll = document.querySelector("#container")
+const containerForSquares = document.querySelector(".squareContainer")    
 const buttonCreateSquares = document.createElement("button")
 buttonCreateSquares.textContent = "Number of squares"
 buttonCreateSquares.className = "button"
-buttonContainer.appendChild(buttonCreateSquares)
-
-const buttonRefresh = document.createElement("button")
-buttonRefresh.textContent = "Refresh"
-buttonRefresh.className = "button"
-buttonContainer.appendChild(buttonRefresh)
+containerForAll.appendChild(buttonCreateSquares)
 
 
-// EVENT LISTENERS
 buttonCreateSquares.addEventListener("click", createSquares)
-buttonRefresh.addEventListener("click", refreshPage)
-function refreshPage(){
-    window.location.reload()
-}
-
 
 function createSquares(num) {
-    function enterNumber(){
+    function enterNumber() {
         num = parseInt(prompt("Number of squares per side"))
         while(num >= 100){
             num = parseInt(prompt("Number of squares per side"))
         }
     }
     enterNumber()
-
     for(let i = 0; i < num * num; i++) {
         const square = document.createElement("div")
         square.className = "addSquare"
         square.style.height = (600/num) + "px";
         square.style.width = (600/num) + "px";
+        containerForSquares.appendChild(square) 
         square.addEventListener("mouseenter", changeColor)
         square.addEventListener("mouseleave", defaultColor)
-        containerForSquares.appendChild(square)
-        
         function changeColor() {
             let randomColor1 = Math.random() * 256 + 1
             let randomColor2 = Math.random() * 256 + 1
             let randomColor3 = Math.random() * 256 + 1
             square.style.backgroundColor =  `rgb(${randomColor1},${randomColor2},${randomColor3})`
-        }
+            square.addEventListener("mouseover", () => {
+                if(!square.style.opacity)
+                    square.style.opacity = 1
+                    square.style.opacity -= 0.1; 
+                    console.log(square.style.opacity) 
+                })
+            }
         function defaultColor() {
-            square.style.backgroundColor =  "lightblue"
+            square.style.backgroundColor = "lightblue"
         }
+    }
+    buttonCreateSquares.addEventListener("click", refreshPage)
+    function refreshPage(){
+        window.location.reload()
     }
     buttonCreateSquares.removeEventListener("click", createSquares)
 }
@@ -64,3 +55,4 @@ function createSquares(num) {
 
 
 
+   
